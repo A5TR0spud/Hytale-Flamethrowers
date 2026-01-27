@@ -10,11 +10,13 @@ set v="indev"
         echo !b:Indev=!
     )
 )
-xcopy "Server" "builds\Server\" /E
-xcopy "Common" "builds\Common\" /E
-del "builds\A5TR0spud.Flamethrowers-!v!.zip" /Q
+xcopy "Server" "builds\Server\" /e
+xcopy "Common" "builds\Common\" /e
+del "builds\A5TR0spud.Flamethrowers-!v!.zip" /q
 powershell -Command "Compress-Archive -Path 'builds\*' -DestinationPath 'builds\A5TR0spud.Flamethrowers-!v!.zip'"
-rmdir "builds\Server" /S /Q
-rmdir "builds\Common" /S /Q
-del "builds\manifest.json" /Q
+rmdir "builds\Server" /s /q /f
+rmdir "builds\Common" /s /q /f
+del "builds\manifest.json" /q
+del "%~dp0..\..\..\..\Mods\A5TR0spud.Flamethrowers*.zip" /q
+copy "builds\A5TR0spud.Flamethrowers-!v!.zip" %~dp0..\..\..\..\Mods
 endlocal
