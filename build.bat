@@ -14,8 +14,8 @@ xcopy "Server" "builds\Server\" /e
 xcopy "Common" "builds\Common\" /e
 del "builds\A5TR0spud.Flamethrowers-!v!.zip" /q
 powershell -Command "Compress-Archive -Path 'builds\*' -DestinationPath 'builds\A5TR0spud.Flamethrowers-!v!.zip'"
-rmdir "builds\Server" /s /q /f
-rmdir "builds\Common" /s /q /f
+rmdir "builds\Server" /s /q
+rmdir "builds\Common" /s /q
 del "builds\manifest.json" /q
 if "%~dp0.."=="mods\" do (
     if "%~dp0..\..\.."=="Saves\" do (
