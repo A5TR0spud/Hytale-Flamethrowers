@@ -35,7 +35,7 @@
   "HitBlock": "Block_Break_Adventure",
   "Next": {
     "Type": "ModifyInventory",
-    "AdjustHeldItemDurability": -0.1,
+    "AdjustHeldItemDurability": -0.05,
     "NotifyOnBreak": true,
     "RequiredGameMode": "Adventure"
   }
