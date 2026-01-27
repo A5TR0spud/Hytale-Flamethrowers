@@ -51,14 +51,9 @@
         "RequiredTierLevel": 2
       }
     ],
-    "Output": [
-      {
-        "ItemId": "A5_Flamethrower",
-        "Metadata": {
-          "Durability": 0
-        }
-      }
-    ]
+    "PrimaryOutput": {
+      "ItemId": "A5_Flamethrower"
+    }
   },
   "Interactions": {
     "Primary": {
@@ -159,5 +154,5 @@
     "Ammo"
   ],
   "Reticle": "DefaultMelee",
-  "MaxDurability": 200
+  "MaxDurability": 180
 }

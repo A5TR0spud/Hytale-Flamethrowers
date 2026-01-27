@@ -14,7 +14,8 @@
       "RandomSettings": {
         "MinVolume": 0,
         "MinPitch": -1.8240371213405997,
-        "MaxPitch": 1.6500422849992202
+        "MaxPitch": 1.6500422849992202,
+        "MaxStartOffset": 0.05
       },
       "RoundRobinHistorySize": 4
     }

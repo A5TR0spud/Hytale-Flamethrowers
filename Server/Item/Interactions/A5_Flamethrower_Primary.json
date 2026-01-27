@@ -16,8 +16,12 @@
       },
       "ValueType": "Percent",
       "Behaviour": "Set",
-      "Next": "A5_Flamethrower_Shoot"
-    }
+      "Next": "A5_Flamethrower_Shoot",
+      "Effects": {
+        "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start"
+      }
+    },
+    "Failed": "Common_Bow_No_Ammo"
   },
   "Next": {
     "Type": "ChangeStat",
