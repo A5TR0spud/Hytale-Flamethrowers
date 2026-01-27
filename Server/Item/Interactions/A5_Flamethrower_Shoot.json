@@ -1,0 +1,42 @@
+{
+  "Type": "Selector",
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "A5_Flamethrower_Fire",
+        "PositionOffset": {
+          "Y": 0.15,
+          "Z": 1
+        }
+      }
+    ],
+    "MovementEffects": {
+      "DisableSprint": true
+    },
+    "WorldSoundEventId": "A5_Flame_Blast"
+  },
+  "RunTime": 0.1,
+  "HorizontalSpeedMultiplier": 0.7,
+  "Selector": {
+    "Id": "Stab",
+    "TestLineOfSight": true,
+    "ExtendTop": 0.75,
+    "ExtendBottom": 0.75,
+    "ExtendLeft": 0.75,
+    "ExtendRight": 0.75,
+    "StartDistance": 0.1,
+    "EndDistance": 5
+  },
+  "HitEntity": {
+    "Interactions": [
+      "A5_Flamethrower_Damage"
+    ]
+  },
+  "HitBlock": "Block_Break_Adventure",
+  "Next": {
+    "Type": "ModifyInventory",
+    "AdjustHeldItemDurability": -0.1,
+    "NotifyOnBreak": true,
+    "RequiredGameMode": "Adventure"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "Type": "DamageEntity",
+  "Next": {
+    "Type": "Serial",
+    "Interactions": [
+      {
+        "Type": "ApplyEffect",
+        "EffectId": "Burn",
+        "Entity": "Target"
+      },
+      {
+        "Type": "ClearEntityEffect",
+        "Entity": "Target",
+        "EntityEffectId": "Freeze"
+      }
+    ]
+  },
+  "DamageEffects": {
+    "Knockback": {
+      "Force": -0.005,
+      "Duration": 0.1
+    }
+  },
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Fire": 5.5
+    },
+    "RandomPercentageModifier": 0.0909090909091
+  }
+}

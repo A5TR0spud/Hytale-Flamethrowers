@@ -1,0 +1,27 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Flamethrowers/A5_Flame_1.ogg",
+        "Sounds/Weapons/Flamethrowers/A5_Flame_2.ogg",
+        "Sounds/Weapons/Flamethrowers/A5_Flame_3.ogg",
+        "Sounds/Weapons/Flamethrowers/A5_Flame_4.ogg",
+        "Sounds/Weapons/Flamethrowers/A5_Flame_5.ogg",
+        "Sounds/Weapons/Flamethrowers/A5_Flame_6.ogg",
+        "Sounds/Weapons/Flamethrowers/A5_Flame_7.ogg"
+      ],
+      "Volume": 0,
+      "RandomSettings": {
+        "MinVolume": 0,
+        "MinPitch": -1.8240371213405997,
+        "MaxPitch": 1.6500422849992202
+      },
+      "RoundRobinHistorySize": 4
+    }
+  ],
+  "Volume": -3.2,
+  "Parent": "SFX_Attn_Moderate",
+  "AudioCategory": "AudioCat_Magic_Staff",
+  "AmbientDuckingVolume": -9.6,
+  "MusicDuckingVolume": -1.2
+}

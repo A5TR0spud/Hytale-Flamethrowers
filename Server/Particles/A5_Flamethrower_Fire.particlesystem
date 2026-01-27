@@ -1,0 +1,60 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Fire_Projectile_Sparks",
+      "PositionOffset": {
+        "X": 0.0,
+        "Z": 0.0
+      },
+      "FixedRotation": false,
+      "RotationOffset": {
+        "Yaw": 180
+      },
+      "LifeSpan": {
+        "Max": 0.3,
+        "Min": 0.1
+      },
+      "InitialVelocity": {
+        "Speed": {
+          "Min": -15,
+          "Max": -15
+        }
+      }
+    },
+    {
+      "SpawnerId": "Fire_Projectile_Fire_Trail",
+      "RotationOffset": {
+        "Yaw": 180
+      },
+      "LifeSpan": {
+        "Max": 0.3,
+        "Min": 0.1
+      },
+      "InitialVelocity": {
+        "Speed": {
+          "Min": -15,
+          "Max": -15
+        }
+      }
+    },
+    {
+      "SpawnerId": "Fire_Projectile_Fire_Core",
+      "RotationOffset": {
+        "Yaw": 180
+      },
+      "LifeSpan": {
+        "Max": 0.3,
+        "Min": 0.1
+      }
+    },
+    {
+      "SpawnerId": "Fire_Charge_Charging_Constant1",
+      "LifeSpan": {
+        "Min": 0.1,
+        "Max": 0.1
+      }
+    }
+  ],
+  "CullDistance": 100.0,
+  "IsImportant": false
+}

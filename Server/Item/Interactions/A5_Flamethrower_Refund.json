@@ -1,0 +1,14 @@
+{
+  "Type": "StatsCondition",
+  "Costs": {
+    "Ammo": 90
+  },
+  "ValueType": "Percent",
+  "Next": {
+    "Type": "ModifyInventory",
+    "ItemToAdd": {
+      "Id": "Ingredient_Fire_Essence",
+      "OverrideDroppedItemAnimation": true
+    }
+  }
+}
