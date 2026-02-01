@@ -1,14 +1,138 @@
 {
-  "Type": "StatsCondition",
-  "Costs": {
-    "Ammo": 90
-  },
-  "ValueType": "Percent",
-  "Next": {
-    "Type": "ModifyInventory",
-    "ItemToAdd": {
-      "Id": "Ingredient_Fire_Essence",
-      "OverrideDroppedItemAnimation": true
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "StatsCondition",
+      "Costs": {
+        "Ammo": 9
+      },
+      "Next": {
+        "Type": "ModifyInventory",
+        "ItemToAdd": {
+          "Id": "Ingredient_Charcoal",
+          "OverrideDroppedItemAnimation": true,
+          "Quantity": 9
+        }
+      },
+      "Failed": {
+        "Type": "StatsCondition",
+        "Costs": {
+          "Ammo": 8
+        },
+        "Next": {
+          "Type": "ModifyInventory",
+          "ItemToAdd": {
+            "Id": "Ingredient_Charcoal",
+            "OverrideDroppedItemAnimation": true,
+            "Quantity": 8
+          }
+        },
+        "Failed": {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Ammo": 7
+          },
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToAdd": {
+              "Id": "Ingredient_Charcoal",
+              "OverrideDroppedItemAnimation": true,
+              "Quantity": 7
+            }
+          },
+          "Failed": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "Ammo": 6
+            },
+            "Next": {
+              "Type": "ModifyInventory",
+              "ItemToAdd": {
+                "Id": "Ingredient_Charcoal",
+                "OverrideDroppedItemAnimation": true,
+                "Quantity": 6
+              }
+            },
+            "Failed": {
+              "Type": "StatsCondition",
+              "Costs": {
+                "Ammo": 5
+              },
+              "Next": {
+                "Type": "ModifyInventory",
+                "ItemToAdd": {
+                  "Id": "Ingredient_Charcoal",
+                  "OverrideDroppedItemAnimation": true,
+                  "Quantity": 5
+                }
+              },
+              "Failed": {
+                "Type": "StatsCondition",
+                "Costs": {
+                  "Ammo": 4
+                },
+                "Next": {
+                  "Type": "ModifyInventory",
+                  "ItemToAdd": {
+                    "Id": "Ingredient_Charcoal",
+                    "OverrideDroppedItemAnimation": true,
+                    "Quantity": 4
+                  }
+                },
+                "Failed": {
+                  "Type": "StatsCondition",
+                  "Costs": {
+                    "Ammo": 3
+                  },
+                  "Next": {
+                    "Type": "ModifyInventory",
+                    "ItemToAdd": {
+                      "Id": "Ingredient_Charcoal",
+                      "OverrideDroppedItemAnimation": true,
+                      "Quantity": 3
+                    }
+                  },
+                  "Failed": {
+                    "Type": "StatsCondition",
+                    "Costs": {
+                      "Ammo": 2
+                    },
+                    "Next": {
+                      "Type": "ModifyInventory",
+                      "ItemToAdd": {
+                        "Id": "Ingredient_Charcoal",
+                        "OverrideDroppedItemAnimation": true,
+                        "Quantity": 2
+                      }
+                    },
+                    "Failed": {
+                      "Type": "StatsCondition",
+                      "Costs": {
+                        "Ammo": 1
+                      },
+                      "Next": {
+                        "Type": "ModifyInventory",
+                        "ItemToAdd": {
+                          "Id": "Ingredient_Charcoal",
+                          "OverrideDroppedItemAnimation": true,
+                          "Quantity": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "Type": "ChangeStat",
+      "Behaviour": "Set",
+      "StatModifiers": {
+        "Ammo": 0
+      }
     }
-  }
+  ]
 }

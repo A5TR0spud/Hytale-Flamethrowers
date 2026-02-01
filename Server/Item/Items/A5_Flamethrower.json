@@ -73,6 +73,11 @@
           "Type": "ChangeActiveSlot"
         }
       ]
+    },
+    "Ability3": {
+      "Interactions": [
+        "A5_Flamethrower_Reload"
+      ]
     }
   },
   "InteractionVars": {

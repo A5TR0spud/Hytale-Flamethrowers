@@ -1,0 +1,96 @@
+{
+  "Type": "StatsCondition",
+  "Next": {
+    "Type": "Simple",
+    "Next": {
+      "Type": "Repeat",
+      "Repeat": 9,
+      "ForkInteractions": {
+        "Interactions": [
+          {
+            "Type": "StatsCondition",
+            "Costs": {
+              "Ammo": 100
+            },
+            "ValueType": "Percent",
+            "LessThan": true,
+            "Next": {
+              "Type": "ModifyInventory",
+              "ItemToRemove": {
+                "Id": "Ingredient_Charcoal"
+              },
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Ammo": 1
+                }
+              },
+              "RequiredGameMode": "Adventure"
+            }
+          }
+        ]
+      },
+      "CancelOnItemChange": true,
+      "HorizontalSpeedMultiplier": 0.5,
+      "Failed": {
+        "Type": "StatsCondition",
+        "Costs": {
+          "Ammo": 1
+        },
+        "LessThan": true,
+        "Failed": {
+          "Type": "Simple",
+          "RunTime": 0.1,
+          "Effects": {
+            "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start"
+          }
+        },
+        "Next": {
+          "Type": "ModifyInventory",
+          "RequiredGameMode": "Adventure",
+          "ItemToRemove": {
+            "Id": "Ingredient_Fire_Essence"
+          },
+          "Next": {
+            "Type": "ChangeStat",
+            "StatModifiers": {
+              "Ammo": 100
+            },
+            "Behaviour": "Set",
+            "ValueType": "Percent",
+            "Next": {
+              "Type": "Simple",
+              "RunTime": 0.1,
+              "Effects": {
+                "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start"
+              }
+            }
+          },
+          "Failed": {
+            "Type": "Simple",
+            "Effects": {
+              "LocalSoundEventId": "SFX_Bow_No_Ammo"
+            },
+            "RunTime": 0.3
+          }
+        }
+      },
+      "Next": {
+        "Type": "Simple",
+        "Effects": {
+          "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start"
+        },
+        "RunTime": 0.1
+      }
+    },
+    "Effects": {
+      "ItemAnimationId": "Interact"
+    }
+  },
+  "LessThan": true,
+  "Costs": {
+    "Ammo": 100
+  },
+  "ValueType": "Percent",
+  "Failed": "Common_Bow_No_Ammo"
+}

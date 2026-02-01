@@ -3,31 +3,12 @@
   "Costs": {
     "Ammo": 0.3
   },
-  "Failed": {
-    "Type": "ModifyInventory",
-    "ItemToRemove": {
-      "Id": "Ingredient_Fire_Essence"
-    },
-    "RequiredGameMode": "Adventure",
-    "Next": {
-      "Type": "ChangeStat",
-      "StatModifiers": {
-        "Ammo": 100
-      },
-      "ValueType": "Percent",
-      "Behaviour": "Set",
-      "Next": "A5_Flamethrower_Shoot",
-      "Effects": {
-        "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start"
-      }
-    },
-    "Failed": "Common_Bow_No_Ammo"
-  },
   "Next": {
     "Type": "ChangeStat",
     "StatModifiers": {
       "Ammo": -0.3
     },
     "Next": "A5_Flamethrower_Shoot"
-  }
+  },
+  "Failed": "A5_Flamethrower_Reload"
 }
