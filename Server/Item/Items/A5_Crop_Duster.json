@@ -1,0 +1,130 @@
+{
+  "Parent": "A5_Flamethrower_Template",
+  "InteractionVars": {
+    "On_Hit_Entity": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Poison_T1"
+        },
+        {
+          "Type": "ClearEntityEffect",
+          "Entity": "Target",
+          "EntityEffectId": "Freeze"
+        },
+        {
+          "Type": "ClearEntityEffect",
+          "Entity": "Target",
+          "EntityEffectId": "Potion_Health_Lesser_Regen"
+        },
+        {
+          "Type": "ClearEntityEffect",
+          "Entity": "Target",
+          "EntityEffectId": "Potion_Health_Greater_Regen"
+        },
+        {
+          "Type": "ClearEntityEffect",
+          "Entity": "Target",
+          "EntityEffectId": "Potion_Stamina_Regen"
+        },
+        {
+          "Type": "DamageEntity",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Poison": 1
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": -0.003,
+              "Duration": 0.1
+            }
+          }
+        }
+      ]
+    },
+    "On_Hit_Block": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "FertilizeSoil"
+            },
+            {
+              "Type": "UseWateringCan",
+              "Duration": 86400
+            }
+          ]
+        }
+      ]
+    },
+    "Shoot_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "GreenOrbImpact",
+                "RotationOffset": {
+                  "Yaw": 180
+                },
+                "PositionOffset": {
+                  "X": 0,
+                  "Z": 1,
+                  "Y": 0.15
+                },
+                "Scale": 0.25
+              },
+              {
+                "SystemId": "Seed_Place_Dust",
+                "PositionOffset": {
+                  "Y": -2,
+                  "Z": 2
+                },
+                "RotationOffset": {
+                  "Yaw": 180
+                },
+                "Color": "#55956b",
+                "Scale": 2
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "Model": "Items/Weapons/Flamethrowers/Crop_Duster/Crop_Duster.blockymodel",
+  "Texture": "Items/Weapons/Flamethrowers/Crop_Duster/Crop_Duster_Texture.png",
+  "TranslationProperties": {
+    "Name": "server.items.A5_Crop_Duster.name",
+    "Description": "server.items.A5_Crop_Duster.description"
+  },
+  "Quality": "Rare",
+  "Icon": "Icons/ItemsGenerated/A5_Crop_Duster.png",
+  "IconProperties": {
+    "Scale": 0.45,
+    "Rotation": [
+      317,
+      87,
+      0
+    ],
+    "Translation": [
+      10,
+      -31
+    ]
+  },
+  "Interactions": {
+    "Secondary": {
+      "Interactions": [
+        "A5_Flamethrower_Primary"
+      ],
+      "Cooldown": {
+        "Id": "Shoot",
+        "Cooldown": 0.1
+      }
+    }
+  }
+}

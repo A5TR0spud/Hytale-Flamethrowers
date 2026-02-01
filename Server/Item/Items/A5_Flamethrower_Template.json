@@ -1,7 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.A5_Flamethrower.name",
-    "Description": "server.items.A5_Flamethrower.description"
+    "Name": "server.items.A5_Flamethrower_Template.name"
   },
   "Categories": [
     "Items.Weapons"
@@ -20,39 +19,29 @@
       }
     }
   },
-  "Recipe": {
-    "KnowledgeRequired": false,
-    "Input": [
-      {
-        "ItemId": "Ingredient_Bar_Adamantite",
-        "Quantity": 12
+  "Interactions": {
+    "Primary": {
+      "Cooldown": {
+        "Cooldown": 0.1,
+        "Id": "Shoot"
       },
-      {
-        "ItemId": "Ingredient_Leather_Heavy",
-        "Quantity": 3
-      },
-      {
-        "ItemId": "Ingredient_Fabric_Scrap_Cindercloth",
-        "Quantity": 4
-      },
-      {
-        "ItemId": "Ingredient_Fire_Essence",
-        "Quantity": 30
-      }
-    ],
-    "TimeSeconds": 3.5,
-    "BenchRequirement": [
-      {
-        "Id": "Alchemybench",
-        "Type": "Crafting",
-        "Categories": [
-          "Alchemy_Bombs"
-        ],
-        "RequiredTierLevel": 2
-      }
-    ],
-    "PrimaryOutput": {
-      "ItemId": "A5_Flamethrower"
+      "Interactions": [
+        "A5_Flamethrower_Primary"
+      ]
+    },
+    "Secondary": "Gun_Attack",
+    "SwapFrom": {
+      "Interactions": [
+        "A5_Flamethrower_Refund",
+        {
+          "Type": "ChangeActiveSlot"
+        }
+      ]
+    },
+    "Ability3": {
+      "Interactions": [
+        "A5_Flamethrower_Reload"
+      ]
     }
   },
   "InteractionVars": {
@@ -98,6 +87,16 @@
           }
         }
       ]
+    },
+    "On_Hit_Entity": {
+      "Interactions": [
+        "A5_Flamethrower_Damage"
+      ]
+    },
+    "On_Hit_Block": {
+      "Interactions": [
+        "Block_Break_Adventure"
+      ]
     }
   },
   "IconProperties": {
@@ -114,7 +113,7 @@
   },
   "Texture": "Items/Weapons/Flamethrowers/Flamethrower/Flamethrower_Texture.png",
   "Icon": "Icons/ItemsGenerated/A5_Flamethrower.png",
-  "Quality": "Rare",
+  "Quality": "Template",
   "Tags": {
     "Type": [
       "Weapon"
@@ -134,6 +133,5 @@
     "Ammo"
   ],
   "Reticle": "DefaultMelee",
-  "MaxDurability": 180,
-  "Parent": "A5_Flamethrower_Template"
+  "MaxDurability": 180
 }

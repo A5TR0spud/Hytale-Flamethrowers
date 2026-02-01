@@ -1,121 +1,125 @@
 {
-  "Type": "Serial",
-  "Interactions": [
-    {
-      "Type": "StatsCondition",
-      "Costs": {
-        "Ammo": 9
-      },
-      "Next": {
-        "Type": "ModifyInventory",
-        "ItemToAdd": {
-          "Id": "Ingredient_Charcoal",
-          "OverrideDroppedItemAnimation": true,
-          "Quantity": 9
-        }
-      },
-      "Failed": {
+  "Type": "Condition",
+  "RequiredGameMode": "Adventure",
+  "Next": {
+    "Type": "Serial",
+    "Interactions": [
+      {
         "Type": "StatsCondition",
         "Costs": {
-          "Ammo": 8
+          "Ammo": 9
         },
         "Next": {
           "Type": "ModifyInventory",
           "ItemToAdd": {
             "Id": "Ingredient_Charcoal",
             "OverrideDroppedItemAnimation": true,
-            "Quantity": 8
+            "Quantity": 9
           }
         },
         "Failed": {
           "Type": "StatsCondition",
           "Costs": {
-            "Ammo": 7
+            "Ammo": 8
           },
           "Next": {
             "Type": "ModifyInventory",
             "ItemToAdd": {
               "Id": "Ingredient_Charcoal",
               "OverrideDroppedItemAnimation": true,
-              "Quantity": 7
+              "Quantity": 8
             }
           },
           "Failed": {
             "Type": "StatsCondition",
             "Costs": {
-              "Ammo": 6
+              "Ammo": 7
             },
             "Next": {
               "Type": "ModifyInventory",
               "ItemToAdd": {
                 "Id": "Ingredient_Charcoal",
                 "OverrideDroppedItemAnimation": true,
-                "Quantity": 6
+                "Quantity": 7
               }
             },
             "Failed": {
               "Type": "StatsCondition",
               "Costs": {
-                "Ammo": 5
+                "Ammo": 6
               },
               "Next": {
                 "Type": "ModifyInventory",
                 "ItemToAdd": {
                   "Id": "Ingredient_Charcoal",
                   "OverrideDroppedItemAnimation": true,
-                  "Quantity": 5
+                  "Quantity": 6
                 }
               },
               "Failed": {
                 "Type": "StatsCondition",
                 "Costs": {
-                  "Ammo": 4
+                  "Ammo": 5
                 },
                 "Next": {
                   "Type": "ModifyInventory",
                   "ItemToAdd": {
                     "Id": "Ingredient_Charcoal",
                     "OverrideDroppedItemAnimation": true,
-                    "Quantity": 4
+                    "Quantity": 5
                   }
                 },
                 "Failed": {
                   "Type": "StatsCondition",
                   "Costs": {
-                    "Ammo": 3
+                    "Ammo": 4
                   },
                   "Next": {
                     "Type": "ModifyInventory",
                     "ItemToAdd": {
                       "Id": "Ingredient_Charcoal",
                       "OverrideDroppedItemAnimation": true,
-                      "Quantity": 3
+                      "Quantity": 4
                     }
                   },
                   "Failed": {
                     "Type": "StatsCondition",
                     "Costs": {
-                      "Ammo": 2
+                      "Ammo": 3
                     },
                     "Next": {
                       "Type": "ModifyInventory",
                       "ItemToAdd": {
                         "Id": "Ingredient_Charcoal",
                         "OverrideDroppedItemAnimation": true,
-                        "Quantity": 2
+                        "Quantity": 3
                       }
                     },
                     "Failed": {
                       "Type": "StatsCondition",
                       "Costs": {
-                        "Ammo": 1
+                        "Ammo": 2
                       },
                       "Next": {
                         "Type": "ModifyInventory",
                         "ItemToAdd": {
                           "Id": "Ingredient_Charcoal",
                           "OverrideDroppedItemAnimation": true,
-                          "Quantity": 1
+                          "Quantity": 2
+                        }
+                      },
+                      "Failed": {
+                        "Type": "StatsCondition",
+                        "Costs": {
+                          "Ammo": 1
+                        },
+                        "Next": {
+                          "Type": "ModifyInventory",
+                          "ItemToAdd": {
+                            "Id": "Ingredient_Charcoal",
+                            "OverrideDroppedItemAnimation": true,
+                            "Quantity": 1
+                          }
                         }
                       }
                     }
@@ -125,14 +129,14 @@
             }
           }
         }
+      },
+      {
+        "Type": "ChangeStat",
+        "Behaviour": "Set",
+        "StatModifiers": {
+          "Ammo": 0
+        }
       }
-    },
-    {
-      "Type": "ChangeStat",
-      "Behaviour": "Set",
-      "StatModifiers": {
-        "Ammo": 0
-      }
-    }
-  ]
+    ]
+  }
 }
