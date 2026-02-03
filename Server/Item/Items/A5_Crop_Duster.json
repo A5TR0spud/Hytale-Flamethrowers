@@ -112,7 +112,7 @@
       0
     ],
     "Translation": [
-      10,
+      -7,
       -31
     ]
   },
@@ -124,6 +124,15 @@
       "Cooldown": {
         "Id": "Shoot",
         "Cooldown": 0.1
+      }
+    }
+  },
+  "PlayerAnimationsId": {
+    "Parent": "Rifle",
+    "Animations": {
+      "Idle": {
+        "ThirdPerson": "Characters/Animations/Items/Dual_Handed/A5_Crop_Duster/Idle.blockyanim",
+        "Speed": 0.5
       }
     }
   }

@@ -86,6 +86,23 @@
           }
         }
       ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.1,
+          "Effects": {
+            "ItemAnimationId": "Shoot",
+            "ClearAnimationOnFinish": true
+          },
+          "Rules": {
+            "InterruptedBy": [
+              "Primary"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
